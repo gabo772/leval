@@ -1,6 +1,14 @@
 body{
     margin: 0;
-    background-image: url(./imgs/fondo.jpg);
+    /*background-image: url(./imgs/fondo.jpg);*/
+    background: #D8F4EC;
+}
+
+p,h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+    
 }
 
 .container,header,.navigator,.body,.footer,.img,.nav-left,.nav-right,.item{
@@ -73,7 +81,8 @@ body{
 .navigator .item a{
     text-decoration: none;
     font-size: 1.5rem;
-    color:#148982
+    color:#148982;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .navigator .item a:hover{
     text-decoration: none;
@@ -134,7 +143,8 @@ body{
     margin:20px 0;
     width: 100%;
     justify-content: flex-end;
-    
+    background: #66CAC4;
+    padding: 12em 0 ;
 }
 .imagen-inicio-mecanico img{
     padding-right: 120px;
@@ -231,6 +241,7 @@ body{
 .c-mision-vision .c-vision span, .c-mision-vision .c-mision span{
     font-size: 25px;
 }
+
 
 
 
