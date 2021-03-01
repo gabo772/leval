@@ -7,14 +7,14 @@ body{
 p,h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-p{
-    
+h1{
+    color: rgb(16, 94, 97);
 }
 
 .container,header,.navigator,.body,.footer,.img,.nav-left,.nav-right,.item{
     display: flex;
 }
-.c-inicio,.c-quienes-somos,.c-mision,.c-vision,.c-contectenos,.imagenes-inicio,.texto-correo,.texto-mecanico{
+.c-inicio,.c-quienes-somos,.c-mision,.c-vision,.c-contactenos,.imagenes-inicio,.texto-correo,.texto-mecanico{
     display: flex;
 }
 
@@ -242,6 +242,80 @@ p{
     font-size: 25px;
 }
 
+.c-contactenos{
+    height: 26em;
+    flex-direction: column;
+    background: linear-gradient(180deg, #D8F4EC 0%, #77B7B6 33.33%, rgba(8, 61, 65, 0.62) 83.33%);
+    padding-top: 6em;
+}
+.c-contactenos h1{
+    padding-left: 4em;
+}
+.contactenos-descripcion{
+    display: flex;
+    flex-direction: row;
+    padding-top: 4em;
+    justify-content: space-between;
+}
+.contactenos-descripcion .telefonos{
+    display: flex;
+    flex-direction: column;
+    
+}
+.contactenos-descripcion .telefonos ul{
+    list-style: none;
+}
+
+.contactenos-descripcion .telefonos p{
+    font-size: 20px;
+    padding-left: 4em;
+}
+
+.contactenos-descripcion .email{
+    display: flex;
+    align-items: flex-start;
+    
+}
+
+.email a{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+.email a p{
+    padding-left: 1em;
+    font-size: 20px;
+    
+}
+
+
+.contactenos-descripcion .rrss{
+    display: flex;
+    flex-direction: column;
+    
+
+
+}
+.rrss a{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color:black;
+}
+.rrss a p{
+    padding-left: 1em;
+    font-size: 20px;
+    
+}
+
+.contactenos-descripcion .rrss a{
+    padding: 0 2em;
+}
+
+.contactenos-descripcion  a img{
+    width: 50px;
+    height: 50px;
+}
 
 
 
