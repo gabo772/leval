@@ -321,8 +321,8 @@ h1{
 
 /*MEDIA QUERIES*/
 
-/*@media(max-width:1920px){
-    .header{
+@media(max-width:425){
+    .header{ 
         height: 150px;
     }
 
@@ -332,4 +332,4 @@ h1{
         
     }
 
-}*/
+}
