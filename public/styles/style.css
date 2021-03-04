@@ -321,9 +321,20 @@ h1{
 
 /*MEDIA QUERIES*/
 
-@media(max-width:425){
+@media(max-width:768px){
     .header{ 
-        height: 150px;
+        height: 7em;
+    }
+    .img{
+        padding-top: 4.5em;
+    }
+
+    .header .hamburger{
+        padding-top: 2em;
+        position: fixed;
+        display: flex;
+        padding-left: 1em;
+        height: 3em;
     }
 
     .navigator .item a{
