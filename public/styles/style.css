@@ -210,13 +210,12 @@ h1{
 .c-mision-vision{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 300px;
 }
 .c-mision-vision .c-vision{
     display: flex;
     flex-direction:column;
-    margin-left:300px;
     align-items: center;
 }
 .c-mision-vision .c-vision h1{
@@ -225,10 +224,14 @@ h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(16, 94, 97);
 }
+
+.c-mision-vision  p{
+    font-size: 20px
+}
+
 .c-mision-vision .c-mision{
     display: flex;
     flex-direction:column;
-    margin-right: 300px;
     align-items: center;
 }
 .c-mision-vision .c-mision h1{
@@ -342,5 +345,5 @@ h1{
         font-size: 18px;
         
     }
-
+    
 }

@@ -14,6 +14,7 @@ var x = window.matchMedia("(max-width: 768px)")
 var elem=document.getElementsByClassName("hamburger")[0]
 
 function ocultar_mostrar_menu(x){
+  
   if(x){
     elem.removeAttribute("hidden")
     console.log("menor que 768px");
@@ -24,6 +25,18 @@ function ocultar_mostrar_menu(x){
 
 }
 x.addEventListener("",ocultar_mostrar_menu)
+
+
+window.addEventListener("scroll",(e)=>{
+  y = window.scrollY
+  console.log(y);
+  if(y<=203){
+    
+  }else{
+
+  }
+
+})
 
 ScrollReveal({ reset: true }).reveal('.imagen-inicio-correo', { delay: 100 })
 ScrollReveal({ reset: true }).reveal('.imagen-inicio-mecanico', { delay: 100 })
