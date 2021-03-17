@@ -1,6 +1,4 @@
 
-
-
 /*  window.addEventListener('scroll',()=>{
    const scrolled = window.scrollY
    
@@ -20,26 +18,26 @@ function ocultar_mostrar_menu(x){
     console.log("menor que 768px");
   }else{
     elem.setAttribute("hidden")
-    onsole.log("mayor que 768px");
+    console.log("mayor que 768px");
   } 
 
 }
 x.addEventListener("",ocultar_mostrar_menu)
 
-
+var nclass=document.querySelector("div.navigator")
+var hclass=document.querySelector("div.header")
+var divImg = document.getElementsByClassName("img")[0]
 window.addEventListener("scroll",(e)=>{
   y = window.scrollY
-  nclass=document.getElementsByClassName("navigator")
-  hclass=document.getElementsByClassName("header")
-  console.log(y);
+  
+  //console.log(y);
   if(y<=278){
     nclass.className="navigator"
     hclass.className="header"
   }else{
     nclass.className="navigator-scroll"
     hclass.className="header-scroll"
-
-
+    console.log(divImg);
     console.log("cambia clase a scroll");
     console.log(hclass);
   }
