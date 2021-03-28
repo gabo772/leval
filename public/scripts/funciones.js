@@ -24,46 +24,68 @@ function ocultar_mostrar_menu(x){
 }
 x.addEventListener("",ocultar_mostrar_menu)
 
-var nclass=document.querySelector("div.navigator")
-var hclass=document.querySelector("div.header")
-var divImg = document.getElementsByClassName("img")[0]
-window.addEventListener("scroll",(e)=>{
-  y = window.scrollY
-  
-  //console.log(y);
-  if(y<=278){
-    nclass.className="navigator"
-    hclass.className="header"
-  }else{
-    nclass.className="navigator-scroll"
-    hclass.className="header-scroll"
-    console.log(divImg);
-    console.log("cambia clase a scroll");
-    console.log(hclass);
-  }
 
+/* ###########################  TRANSICIONES  ###############################*/
+
+var flag = true
+
+window.addEventListener("scroll",()=>{
+    let y = window.scrollY
+    console.log(y);
+    if(flag && y>=270){
+        myFunc(y)
+        flag=false
+    }
+    if(!flag && y<270){
+        flag=true
+        myFunc(y)
+    }
 })
 
-// if(document.getElementsByClassName("navigator-scroll")[0]){
-//   document.getElementsByClassName("navigator-scroll")[0].addEventListener("transitionend",updateTNavigator,true)
+const myFunc=(scrollY)=>{
+    let headerScroll,navigatorScroll
+    if(scrollY<270 ){
+        
+        
+        if(document.querySelector(".header-scroll")){
+            headerScroll=document.querySelector(".header-scroll")
+            headerScroll.setAttribute("hidden",true)
+        }
+        if(document.querySelector(".header-scrollend")){
+            headerScroll=document.querySelector(".header-scrollend")
+            headerScroll.className="header-scroll"
+            headerScroll.setAttribute("hidden",true)
+        }
+        if(document.querySelector(".navigator-scrollend")){
+            navScroll=document.querySelector(".navigator-scrollend")
+            navScroll.remove()
+        }
+        
+        
+    }else{
+        headerScroll=document.querySelector(".header-scroll")
+        headerScroll.removeAttribute("hidden")
+        headerScroll.className="header-scrollend"
 
-// }
-// if(document.getElementsByClassName("header-scroll")[0]){
+        //NAVIGATOR
+        navScroll=document.querySelector(".navigator").cloneNode(true)
+        navScroll.className="navigator-scroll"
+        document.querySelector(".container").insertBefore(navScroll,document.querySelector(".c-inicio"))
+        setTimeout(()=>{
+            navScroll.className="navigator-scrollend"
+        },1)
+        //navScroll.className="navigator-scrollend"
+        
+       
+    }
+}
 
-//   document.getElementsByClassName("header-scroll")[0].addEventListener("transitionend",updateTHeader,true)
-// }
 
-// const updateTNavigator=()=>{
-//   var el = document.querySelector("div.navigator-scroll");
-//   el.className = "navigator-scroll-end";
-    
-// }
 
-// const updateTHeader=()=>{
-//   var el = document.querySelector("div.header-scroll");
-//   el.className = "header-scroll-end";
-    
-// }
+
+/*##############################################################################*/
+
+
 
 ScrollReveal({ reset: true }).reveal('.imagen-inicio-correo', { delay: 100 })
 ScrollReveal({ reset: true }).reveal('.imagen-inicio-mecanico', { delay: 100 })
