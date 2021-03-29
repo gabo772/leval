@@ -6,23 +6,79 @@
  })
 */
 
+const filtroMostrarOcultar=(elemento,accion)=>{
+    
+    if(accion==="ocultar"){
+        elemento.setAttribute("hidden",true)
+        console.log("ocultar");
+    }else if(accion==="mostrar"){
+        elemento.removeAttribute("hidden")
+        console.log("mostrar");
+    }
+}
 
-var x = window.matchMedia("(max-width: 768px)")
+const mostrarOcultarNavegador=(accion)=>{
+    
+    let navigator=document.querySelector(".navigator")
+    filtroMostrarOcultar(navigator,accion)
+    let navLeft=document.querySelector(".nav-left")
+    filtroMostrarOcultar(navLeft,accion)
+    let navRight=document.querySelector(".nav-right")
+    filtroMostrarOcultar(navRight,accion)
 
-var elem=document.getElementsByClassName("hamburger")[0]
+    let itemInicio=document.getElementsByClassName("item inicio")[0]
+    filtroMostrarOcultar(itemInicio,accion)
+    let aInicio=itemInicio.children[0]
+    console.log(aInicio);
+    filtroMostrarOcultar(aInicio,accion)
+    let itemQS=document.getElementsByClassName("item quienes-somos")[0]
+    filtroMostrarOcultar(itemQS,accion)
+    let aQS=itemQS.children[0]
+    filtroMostrarOcultar(aQS,accion)
+    
+    let itemMision=document.getElementsByClassName("item mision")[0]
+    filtroMostrarOcultar(itemMision,accion)
+    let aMision=itemMision.children[0]
+    filtroMostrarOcultar(aMision,accion)
+   
+    let itemVision=document.getElementsByClassName("item vision")[0]
+    filtroMostrarOcultar(itemVision,accion)
+    let aVision=itemVision.children[0]
+    filtroMostrarOcultar(aVision,accion)
+    
+    let itemContactenos=document.getElementsByClassName("item contactenos")[0]
+    filtroMostrarOcultar(itemContactenos,accion)
+    let aContactenos=itemContactenos.children[0]
+    filtroMostrarOcultar(aContactenos,accion)
+}
 
-function ocultar_mostrar_menu(x){
-  
-  if(x){
-    elem.removeAttribute("hidden")
+const createMenuHamburger=()=>{
+    let menuContainer=document.createElement("div")
+    menuContainer.className="menu-hamburger"
+
+}
+
+
+
+
+
+
+const ocultar_mostrar_menu=(x)=>{
+  let hamburger_ico=document.getElementsByClassName("hamburger")[0]
+  if(x.matches){
+    hamburger_ico.removeAttribute("hidden")
+    mostrarOcultarNavegador("ocultar")
     console.log("menor que 768px");
   }else{
-    elem.setAttribute("hidden")
+    hamburger_ico.setAttribute("hidden",true)
+    mostrarOcultarNavegador("mostrar")
     console.log("mayor que 768px");
   } 
 
 }
-x.addEventListener("",ocultar_mostrar_menu)
+var x = window.matchMedia("(max-width: 768px)")
+ocultar_mostrar_menu(x)
+x.addEventListener("change",ocultar_mostrar_menu)
 
 
 /* ###########################  TRANSICIONES  ###############################*/
@@ -30,21 +86,27 @@ x.addEventListener("",ocultar_mostrar_menu)
 var flag = true
 
 window.addEventListener("scroll",()=>{
+    let limite=244
     let y = window.scrollY
+    let width = document.body.clientWidth
+    if(width<=768){
+        limite=143
+    }
+    
     console.log(y);
-    if(flag && y>=270){
-        myFunc(y)
+    if(flag && y>=limite){
+        myFunc(y,limite)
         flag=false
     }
-    if(!flag && y<270){
+    if(!flag && y<limite){
         flag=true
-        myFunc(y)
+        myFunc(y,limite)
     }
 })
 
-const myFunc=(scrollY)=>{
+const myFunc=(scrollY,limite)=>{
     let headerScroll,navigatorScroll
-    if(scrollY<270 ){
+    if(scrollY<limite ){
         
         
         if(document.querySelector(".header-scroll")){
