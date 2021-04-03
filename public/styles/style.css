@@ -97,11 +97,21 @@ h1{
     flex-direction: column;
     align-items: center;
 }
+
+.c-inicio h1{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
 .c-inicio span{
     
     font-size: 22px;
 
 }
+
+
+
 .imagen-inicio-correo{
     display: flex;
     flex-direction: row;
@@ -168,11 +178,6 @@ h1{
 }
 
 
-.c-inicio h1{
-    font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
-}
 
 
 .c-quienes-somos{
@@ -274,6 +279,7 @@ h1{
 
 .contactenos-descripcion .email{
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
     
 }
@@ -292,8 +298,8 @@ h1{
 
 .contactenos-descripcion .rrss{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: row;
+    align-items: flex-start;
 
 
 }
@@ -313,31 +319,12 @@ h1{
     padding: 0 2em;
 }
 
-.contactenos-descripcion  a img{
+.contactenos-descripcion  img{
     width: 50px;
     height: 50px;
 }
 
-.menu-hamburger{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    background-color: #076262;
-}
-.item-menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    padding: 1em;
-}
-.item-menu a{
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+
 
 
 /*MEDIA QUERIES*/
@@ -345,6 +332,9 @@ h1{
 @media(max-width:768px){
     .header{ 
         height: 7em;
+        position: fixed;
+        width: 100%;
+        z-index: 5;
     }
     .img{
         padding-top: 4.5em;
@@ -363,6 +353,254 @@ h1{
         font-size: 18px;
         
     }
+
+    /*    I N I C I O    */
+    .c-inicio{
+        padding-top: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .c-inicio h1{
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 200;
+        padding-top: 2em;
+    }
+    
+    .c-inicio span{
+        
+        font-size: 22px;
+        
+    }
+    
+    
+    
+    .imagen-inicio-correo{
+        display: flex;
+        flex-direction: column;
+        margin:500px 0;
+        width: 100%;
+        align-items: center;
+        
+    }
+    .imagen-inicio-correo img{
+        padding-left: 0;
+        width: 600px;
+        height: 400px;
+    }
+    .imagen-inicio-correo .texto-correo{
+        flex-direction: column;
+        padding-left: 0;
+        justify-content: center;
+        text-align: center;
+    
+       
+    }
+    .imagen-inicio-correo .texto-correo span p{
+        font-size: 24px;
+        
+    }
+    .imagen-inicio-correo .texto-correo h1{
+        font-size: 38px;
+        font-weight: normal;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(16, 94, 97);
+        
+    }
+    
+    .imagen-inicio-mecanico{
+        display: flex;
+        flex-direction: column;
+        margin:20px 0;
+        width: 100%;
+        align-items: center;
+        background: #66CAC4;
+    }
+    .imagen-inicio-mecanico img{
+        padding-right: 0;
+        width: 480px;
+        height: 320px;
+    }
+    .imagen-inicio-mecanico .texto-mecanico{
+        flex-direction: column;
+        padding-right: 0;
+        text-align: center;
+        justify-content: center;
+        
+    }
+    .imagen-inicio-mecanico .texto-mecanico span p{
+        font-size: 24px;
+       
+    }
+    .imagen-inicio-mecanico .texto-mecanico h1{
+        font-size: 38px;
+        font-weight: normal;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(16, 94, 97);
+    }
+
+
+
+
+    /*   Q U I E N E S    S O M O S     */
+
+    .c-quienes-somos{
+        margin :500px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .c-quienes-somos h1{
+        font-size: 40px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(16, 94, 97);
+        font-weight: 200;
+    }
+    
+    .imagen-quienes-somos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 100px 0;
+        
+    }
+    .imagen-quienes-somos img{
+        width: 680px;
+        height: 320px;
+        margin-bottom: 100px;
+    }
+    .imagen-quienes-somos span p{
+        font-size: 20px;
+    }
+
+
+    /*   M I S I O N    Y   V I S I O N   */
+
+    .c-mision-vision{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 300px;
+    }
+    .c-mision-vision .c-vision{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        margin-top: 2em;
+    }
+    .c-mision-vision .c-vision h1{
+        font-size: 38px;
+        font-weight: normal;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(16, 94, 97);
+    }
+    
+    .c-mision-vision  p{
+        font-size: 15px
+    }
+    
+    .c-mision-vision .c-mision{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    .c-mision-vision .c-mision h1{
+        font-size: 38px;
+        font-weight: normal;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(16, 94, 97);
+    }
+    
+    .c-mision-vision .c-vision span, .c-mision-vision .c-mision span{
+        font-size: 25px;
+    }
+
+
+    /*      C  O  N  T  A  C  T  E  N  O  S        */
+
+
+    .c-contactenos{
+        height: 50em;
+        width: 100%;
+        flex-direction: column;
+        background: linear-gradient(180deg, #D8F4EC 0%, #77B7B6 33.33%, rgba(8, 61, 65, 0.62) 83.33%);
+        align-items: center;
+        padding-top: 6em;
+    }
+    .c-contactenos h1{
+        padding-left: 0;
+    }
+    .contactenos-descripcion{
+        display: flex;
+        flex-direction: column;
+        padding-top: 4em;
+        align-items: center;
+    }
+    .contactenos-descripcion .telefonos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .contactenos-descripcion .telefonos ul{
+        list-style: none;
+    }
+    
+    .contactenos-descripcion .telefonos p{
+        font-size: 20px;
+        padding-left: 0;
+    }
+    
+    .contactenos-descripcion .email{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8em;
+        
+    }
+    
+    .email a{
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+    }
+    .email a p{
+        padding-left: 1em;
+        font-size: 20px;
+        
+    }
+    
+    
+    .contactenos-descripcion .rrss{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4em;
+    }
+    .rrss a{
+        display: flex;
+        text-decoration: none;
+        color:black;
+    }
+    .rrss a p{
+        padding-left: 0;
+        font-size: 20px;
+        
+    }
+    
+    .contactenos-descripcion .rrss a{
+        padding: 0 2em;
+    }
+    
+    .contactenos-descripcion  a img{
+        width: 50px;
+        height: 50px;
+    }
+
+
+
+    
     
 }
 
@@ -496,4 +734,52 @@ h1{
     text-decoration: none;
     color:#277773;
     box-shadow: #076262;
+}
+
+
+
+
+.menu-hamburger{
+    display: flex;
+    transition-property: height;
+    height:0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #076262;
+}
+.item-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+}
+.item-menu:nth-child(1){
+    padding-top: 6em;
+}
+.item-menu a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+
+
+.menu-hamburgerend{
+    display: flex;
+    position:fixed;
+    top: 112px;
+    transition-property: height;
+    transition-duration: 1s;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #076262;
+    z-index: 4;
 }

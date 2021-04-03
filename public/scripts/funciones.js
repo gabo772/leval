@@ -6,6 +6,52 @@
  })
 */
 
+// INTERACTIBILIDAD MENU HAMBURGER
+
+var menuHamburgerAbierto=false
+
+
+const createMenuHamburger=()=>{
+    let items=[
+        "Inicio",
+        "Quienes somos",
+        "Misión",
+        "Visión",
+        "Contáctenos"
+    ]
+    let menuContainer=document.createElement("div")
+    menuContainer.className="menu-hamburger"
+    for(i=0; i<4;i++ ){
+        let item = document.createElement("div")
+        let a= document.createElement("a")
+        a.innerText=items[i]
+        a.href="#"
+        item.className="item-menu"
+        item.appendChild(a)
+        menuContainer.appendChild(item)
+    }
+    document.querySelector(".container").insertBefore(menuContainer,document.querySelector(".c-inicio"))
+
+}
+
+
+const toogleHamburger=()=>{
+    console.log("onclick triggered");
+    if(!menuHamburgerAbierto){
+        createMenuHamburger()
+        let menu=document.querySelector(".menu-hamburger")
+        menu.className="menu-hamburgerend"
+        menuHamburgerAbierto=true
+    }else{
+        let menu=document.querySelector(".menu-hamburgerend")
+        menu.className="menu-hamburger"
+        menu.remove()
+        menuHamburgerAbierto=false
+    }
+}
+
+
+
 const filtroMostrarOcultar=(elemento,accion)=>{
     
     if(accion==="ocultar"){
@@ -52,15 +98,6 @@ const mostrarOcultarNavegador=(accion)=>{
     filtroMostrarOcultar(aContactenos,accion)
 }
 
-const createMenuHamburger=()=>{
-    let menuContainer=document.createElement("div")
-    menuContainer.className="menu-hamburger"
-
-}
-
-
-
-
 
 
 const ocultar_mostrar_menu=(x)=>{
@@ -81,6 +118,17 @@ ocultar_mostrar_menu(x)
 x.addEventListener("change",ocultar_mostrar_menu)
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* ###########################  TRANSICIONES  ###############################*/
 
 var flag = true
@@ -89,19 +137,21 @@ window.addEventListener("scroll",()=>{
     let limite=244
     let y = window.scrollY
     let width = document.body.clientWidth
-    if(width<=768){
-        limite=143
-    }
+    
     
     console.log(y);
-    if(flag && y>=limite){
-        myFunc(y,limite)
-        flag=false
+
+    if(width>768){
+        if(flag && y>=limite){
+            myFunc(y,limite)
+            flag=false
+        }
+        if(!flag && y<limite){
+            flag=true
+            myFunc(y,limite)
+        }
     }
-    if(!flag && y<limite){
-        flag=true
-        myFunc(y,limite)
-    }
+    
 })
 
 const myFunc=(scrollY,limite)=>{
