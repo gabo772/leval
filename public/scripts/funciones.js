@@ -134,7 +134,8 @@ x.addEventListener("change",ocultar_mostrar_menu)
 var flag = true
 
 window.addEventListener("scroll",()=>{
-    let limite=244
+    // Limite es el valor el cual se despliega el nav estático 
+    let limite=220
     let y = window.scrollY
     let width = document.body.clientWidth
     

@@ -107,13 +107,6 @@ h1{
     font-weight: 200;
 }
 
-.c-inicio span{
-    
-    font-size: 22px;
-
-}
-
-
 
 .imagen-inicio-correo{
     display: flex;
@@ -130,18 +123,18 @@ h1{
 }
 .imagen-inicio-correo .texto-correo{
     flex-direction: column;
-    padding-left: 14em;
+    padding-left: 10em;
     justify-content: center;
     text-align: center;
 
    
 }
 .imagen-inicio-correo .texto-correo span p{
-    font-size: 24px;
+    font-size: 18px;
     
 }
 .imagen-inicio-correo .texto-correo h1{
-    font-size: 38px;
+    font-size: 36px;
     font-weight: normal;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(16, 94, 97);
@@ -164,17 +157,17 @@ h1{
 }
 .imagen-inicio-mecanico .texto-mecanico{
     flex-direction: column;
-    padding-right: 12em;
+    padding-right: 1em;
     text-align: center;
     justify-content: center;
     
 }
 .imagen-inicio-mecanico .texto-mecanico span p{
-    font-size: 24px;
+    font-size: 18px;
    
 }
 .imagen-inicio-mecanico .texto-mecanico h1{
-    font-size: 38px;
+    font-size: 36px;
     font-weight: normal;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(16, 94, 97);
@@ -191,7 +184,7 @@ h1{
 }
 
 .c-quienes-somos h1{
-    font-size: 50px;
+    font-size: 36px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(16, 94, 97);
     font-weight: 200;
@@ -210,7 +203,7 @@ h1{
     margin-bottom: 100px;
 }
 .imagen-quienes-somos span p{
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .c-mision-vision{
@@ -232,7 +225,7 @@ h1{
 }
 
 .c-mision-vision  p{
-    font-size: 20px
+    font-size: 18px
 }
 
 .c-mision-vision .c-mision{
@@ -241,7 +234,7 @@ h1{
     align-items: center;
 }
 .c-mision-vision .c-mision h1{
-    font-size: 38px;
+    font-size: 36px;
     font-weight: normal;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(16, 94, 97);
@@ -671,7 +664,7 @@ h1{
 
 .navigator-scroll .item a{
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color:#d9e4e3;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -729,7 +722,7 @@ h1{
 
 .navigator-scrollend .item a{
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color:#d9e4e3;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
