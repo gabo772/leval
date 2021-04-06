@@ -35,21 +35,35 @@ const createMenuHamburger=()=>{
 }
 
 
-const toogleHamburger=()=>{
+const toogleHamburger=async()=>{
     console.log("onclick triggered");
     if(!menuHamburgerAbierto){
         createMenuHamburger()
         let menu=document.querySelector(".menu-hamburger")
-        menu.className="menu-hamburgerend"
-        menuHamburgerAbierto=true
+        setTimeout(()=>{
+            menu.className="menu-hamburgerend"
+            menuHamburgerAbierto=true
+        },10)
+        
     }else{
         let menu=document.querySelector(".menu-hamburgerend")
-        menu.className="menu-hamburger"
-        menu.remove()
-        menuHamburgerAbierto=false
+        await setearClase(menu,"menu-hamburger")
+        setTimeout(()=>{
+            menu.remove()
+            menuHamburgerAbierto=false
+        },500)
+        
     }
 }
 
+
+const setearClase=(elemento,nombre_clase)=>{
+    return new Promise((resolve,reject)=>{
+        elemento.className=nombre_clase
+        resolve()
+        
+    })
+}
 
 
 const filtroMostrarOcultar=(elemento,accion)=>{
@@ -98,6 +112,12 @@ const mostrarOcultarNavegador=(accion)=>{
     filtroMostrarOcultar(aContactenos,accion)
 }
 
+const eliminarMenuHamburger=()=>{
+    if(document.querySelector(".menu-hamburgerend")){
+        document.querySelector(".menu-hamburgerend").remove()
+        menuHamburgerAbierto=false
+    }
+}
 
 
 const ocultar_mostrar_menu=(x)=>{
@@ -109,6 +129,7 @@ const ocultar_mostrar_menu=(x)=>{
   }else{
     hamburger_ico.setAttribute("hidden",true)
     mostrarOcultarNavegador("mostrar")
+    eliminarMenuHamburger()
     console.log("mayor que 768px");
   } 
 
