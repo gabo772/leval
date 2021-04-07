@@ -1026,16 +1026,44 @@ h1{
     background-color: #076262;
     z-index: 4;
 }
-.item-menu{
+
+
+.menu-hamburger .item-menu{
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
     padding: 1em;
     
+    
+    
+    
 }
-.item-menu:nth-child(1){
+.menu-hamburger .item-menu:nth-child(1){
     padding-top: 6em;
+
+    transition-property: visibility;
+    transition-duration: 0.3s;
+    visibility: hidden;
+}
+.menu-hamburger .item-menu:nth-child(2){
+    
+    transition-property: visibility;
+    transition-duration: 0.3s;
+    visibility: hidden;
+}
+.menu-hamburger .item-menu:nth-child(3){
+    
+    transition-property: visibility;
+    transition-duration: 0.1s;
+    visibility: hidden;
+}
+.menu-hamburger .item-menu:nth-child(4){
+    
+    transition-property: visibility;
+    transition-duration: 0s;
+    visibility: hidden;
 }
 .item-menu a{
     text-decoration: none;
@@ -1065,6 +1093,7 @@ h1{
     z-index: 4;
 }
 
+
 .menu-hamburgerend .item-menu{
     display: flex;
     flex-direction: row;
@@ -1072,10 +1101,41 @@ h1{
     width: 100%;
     padding: 1em;
     
+    
 }
 .menu-hamburgerend .item-menu:nth-child(1){
     padding-top: 6em;
+    transition-property: visibility;
+    visibility: visible;
+    
+    
+    
+    
 }
+.menu-hamburgerend .item-menu:nth-child(2){
+    transition-property: visibility;
+    visibility: visible;
+    
+    
+}
+.menu-hamburgerend .item-menu:nth-child(3){
+    transition-property: visibility;
+    visibility: visible;
+    
+   
+}
+.menu-hamburgerend.item-menu:nth-child(4){
+    transition-property: visibility;
+    visibility: visible;
+    
+    
+}
+
+
+
+
+
+
 .menu-hamburgerend .item-menu a{
     text-decoration: none;
     font-size: 1.5rem;

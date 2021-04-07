@@ -20,7 +20,9 @@ const createMenuHamburger=()=>{
         "Contáctenos"
     ]
     let menuContainer=document.createElement("div")
+    
     menuContainer.className="menu-hamburger"
+   
     for(i=0; i<4;i++ ){
         let item = document.createElement("div")
         let a= document.createElement("a")
@@ -40,14 +42,22 @@ const toogleHamburger=async()=>{
     if(!menuHamburgerAbierto){
         createMenuHamburger()
         let menu=document.querySelector(".menu-hamburger")
+        
         setTimeout(()=>{
             menu.className="menu-hamburgerend"
+            
             menuHamburgerAbierto=true
+            
         },10)
+       
+    
         
     }else{
         let menu=document.querySelector(".menu-hamburgerend")
+        
         await setearClase(menu,"menu-hamburger")
+        
+       
         setTimeout(()=>{
             menu.remove()
             menuHamburgerAbierto=false
