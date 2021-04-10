@@ -17,6 +17,7 @@ app.get("/quienes-somos",(req,res)=>{
 
 })
 
-app.listen(port,()=>{
-    console.log(`Server escuchando en http://localhost:${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,()=>{
+    console.log(`Server escuchando en http://localhost:${PORT}`);
 })
