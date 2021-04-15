@@ -275,9 +275,14 @@ h1{
 
 .contactenos-descripcion .email{
     display: flex;
+    flex-direction: column;
+    
+}
+
+.email .correo1,.email .correo2{
+    display: flex;
     flex-direction: row;
     align-items: flex-start;
-    
 }
 
 .email a{
