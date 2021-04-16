@@ -172,6 +172,19 @@ window.addEventListener("scroll",()=>{
     
     console.log(y);
 
+    if(y>=220 && y<2954){
+        //INICIO
+    }else if(y>=2954 && y<4279){
+        //QUIENES SOMOS
+    }else if(y>=4279 && y<4438){
+        //MISION
+    }else if (y>=4438 && y<4862){
+        //VISION
+    }else if(y>4862){
+        //CONTACTENOS
+    }
+
+
     if(width>768){
         if(flag && y>=limite){
             myFunc(y,limite)
